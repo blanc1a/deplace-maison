@@ -1,6 +1,8 @@
 @font-face {
   font-family: Cyberthrone;
   src: url("fonts/Cyberthrone-7nP4.ttf");
+  font-family: TT Trailers Trial Bold;
+  src: url("fonts/TT\ Trailers\ Trial\ Bold.ttf");
 }
 
 * {
@@ -144,7 +146,7 @@ header {
   box-sizing: content-box;
 }
 
-main {
+.main {
   padding: 1rem 3rem;
 }
 
@@ -175,6 +177,7 @@ main {
 .captionWrapperOne small,
 .captionWrapperTwo small {
   width: 50%;
+  font-size: 1.2rem;
 }
 
 .explore {
@@ -226,7 +229,160 @@ main {
   bottom: 1.2vw;
   right: 4vw;
   z-index: 1;
+  transition: transform 0.3s linear;
 }
 
 .arrow:hover {
+  transform: rotate(360deg);
+}
+.arrow:hover::after {
+  transform: rotate(0deg);
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  gap: 1rem;
+  height: 10vh;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  padding: 0.5vw 0 0.5vw 0;
+  background-color: #ddc92a;
+  border-top: solid black 5px;
+  border-bottom: solid black 5px;
+  user-select: none;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 100%;
+  font-size: 3.3rem;
+  font-weight: 500;
+  animation: scroll 15s linear infinite;
+}
+
+.marquee-group span:nth-child(even) {
+  font-size: 1rem;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+
+.text-area {
+  padding: 4rem 8rem 5rem 20rem;
+}
+
+.text-area aside {
+  font-family: Favorit, sans-serif;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  padding-top: 1.2rem;
+}
+
+.text-area p {
+  margin: 0;
+  font-family: Favorit, sans-serif;
+  font-weight: 500;
+  font-size: 5.5rem;
+}
+
+.text-area-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-area-wrapper span {
+  text-decoration: underline;
+}
+
+.shoe-area {
+  position: relative;
+  top: 10%;
+  padding-left: 20rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  height: 100%;
+  gap: 1.5rem;
+  /* pointer-events: none; */
+  transition: 0s ease-in;
+  margin-bottom: 3rem;
+}
+
+.slide-card {
+  background: #e7d6c4;
+  border: solid black 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shoe,
+.date,
+.name,
+.oldPrice,
+.newPrice {
+  margin: 0%;
+}
+.shoe {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 589px;
+  height: 589px;
+}
+
+.unisex {
+  width: 141;
+  height: 61px;
+  position: absolute;
+  z-index: 1;
+  top: 32rem;
+}
+
+.date {
+  font-size: 0.8vw;
+  font-weight: 600;
+}
+
+.name {
+  font-family: "TT Trailers Trial Bold", sans-serif;
+  font-size: 4vw;
+  line-height: 4vw;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -0.03em;
+  margin: 0%;
+}
+
+.oldPrice,
+.newPrice {
+  font-family: Favorit, sans-serif;
+  padding-bottom: 1rem;
+}
+
+.oldPrice {
+  font-size: 0.9vw;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.newPrice {
+  font-size: 1.3vw;
+  font-weight: 500;
 }
