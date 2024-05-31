@@ -332,6 +332,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /*slider kann nicht gedragged werden ohne*/
 }
 
 .shoe,
@@ -418,4 +419,74 @@ header {
 
 .shop-all span:hover::after {
   width: 100%;
+}
+
+.aboutDeplaceMaison {
+  margin-top: 7rem;
+  padding: 4rem 8rem 5rem 20rem;
+}
+
+/*FIXENNNNNN!!!!!*/
+
+.aboutWrapper {
+  display: flex;
+  width: 70vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutWrapper img {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  z-index: 0;
+  left: 3vw;
+}
+
+.names {
+  font-family: Cyberthrone, sans-serif;
+  font-size: 3vw;
+  position: relative;
+  z-index: 1;
+  height: 20vh;
+}
+
+.names h3 {
+  margin: 0;
+}
+
+.namePerson,
+.secondName {
+  transition: transform 0.5s ease-in-out;
+}
+
+.reviews {
+  position: relative;
+  overflow: hidden;
+  height: 20vh;
+}
+
+.review,
+.secondReview {
+  font-size: 1vw;
+  width: 25vw;
+  position: relative;
+  top: 0;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.secondReview,
+.secondName {
+  transform: translateY(100%);
+}
+
+.animate .review,
+.animate .namePerson {
+  transform: translateY(-140%);
+}
+
+.animate .secondReview,
+.animate .secondName {
+  transform: translateY(0);
 }

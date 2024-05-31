@@ -1,9 +1,16 @@
 let slider = document.querySelector(".slider");
-let slideCard = document.querySelector(".slide-card");
+let slideCard = document.querySelectorAll(".slide-card");
 
 let pressed = false;
 let startx;
 let x;
+
+//NICHT FERTIG
+document.addEventListener("DOMContentLoaded", (event) => {
+  setTimeout(() => {
+    document.querySelector(".aboutWrapper").classList.add("animate");
+  }, 2000);
+});
 
 //when the user holds down the mouse
 slider.addEventListener("mousedown", (event) => {
@@ -35,4 +42,5 @@ slider.addEventListener("mousemove", (event) => {
   //gives coordinates relative to the parent div
   x = event.offsetX;
   slideCard.style.left = `${x - startx}px`;
+  console.log("Mouse move:", { x, left: slideCard.style.left });
 });
