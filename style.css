@@ -1,6 +1,9 @@
 @font-face {
   font-family: Cyberthrone;
   src: url("fonts/Cyberthrone-7nP4.ttf");
+}
+
+@font-face {
   font-family: TT Trailers Trial Bold;
   src: url("fonts/TT\ Trailers\ Trial\ Bold.ttf");
 }
@@ -320,7 +323,7 @@ header {
   gap: 1.5rem;
   /* pointer-events: none; */
   transition: 0s ease-in;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
 }
 
 .slide-card {
@@ -385,4 +388,34 @@ header {
 .newPrice {
   font-size: 1.3vw;
   font-weight: 500;
+}
+
+.shop-all {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  right: 0vw;
+}
+
+.shop-all span {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.shop-all span::after {
+  content: " ";
+  position: absolute; /*macht es relative zu dem span el, das wir auf relative gesetzt haben*/
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: black;
+  transition: width 0.2s;
+}
+
+.shop-all span:hover::after {
+  width: 100%;
 }
