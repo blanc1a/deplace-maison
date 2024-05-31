@@ -1,0 +1,232 @@
+@font-face {
+  font-family: Cyberthrone;
+  src: url("fonts/Cyberthrone-7nP4.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 1920px;
+  height: 1080px;
+  background-color: aqua;
+}
+body {
+  background-color: #fcf9ee;
+  width: 100%;
+}
+
+header {
+  height: 50vh;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 25vh;
+  padding: 1.5rem;
+}
+
+.iconLeft {
+  width: 3.2vw;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo-side {
+  transform: translateX(100%);
+  /*verschiebt das Bild um 100% seiner eigenen Breite nach rechts aus dem Container heraus, so dass es nicht sichtbar ist*/
+}
+
+.iconLeft:hover .logo {
+  transform: translateX(-140%) rotate(-20deg);
+  /*beim hovern über den Container, wird das erste img um 140% seiner Breite nach links verschoben und um 20° im Uhrzeigersinn gedreht => dadurch bewegt es sich vollständig aus dem Sichtbereich und dreht sich dabei leicht*/
+}
+
+.iconLeft:hover .logo-side {
+  transform: translateX(0);
+  /*beim hovern über den Container, wird das zweite img auf seine ursprüngliche Position verschoben => in den Sichtbereich des Containers*/
+}
+
+.titleMiddle {
+  font-family: Cyberthrone, sans-serif;
+  font-size: 1.3vw;
+  line-height: 1.3vw;
+  padding: 0.2em 0.4em;
+  text-transform: none;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-image: url(https://web.archive.org/web/20220122221719im_/https://global-uploads.webflow.com/5c9c9c646cf0969b319f264f/5d265c2db3094d6f60ace83a_label.svg);
+}
+
+.titleMiddle span {
+  padding: 0.1em 0.2em;
+}
+
+.cartRight {
+  font-size: 1.2rem;
+  width: 3.2vw;
+  height: 2vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cartTwo {
+  transform: translateY(100%);
+}
+
+.cartRight:hover .cart {
+  transform: translateY(-140%) rotate(-20deg);
+}
+
+.cartRight:hover .cartTwo {
+  transform: translateY(0);
+}
+
+.bigTitle {
+  font-size: 15rem;
+
+  font-weight: 520;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5vw 0 5vw;
+  position: relative;
+  right: 0;
+  top: -7vw;
+  z-index: 0;
+}
+
+.bigTitle p {
+  font-family: Favorit, sans-serif;
+  margin: 0;
+  text-align: right;
+  letter-spacing: -0.1em;
+}
+
+.flexContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: right;
+  word-break: break-word;
+  line-height: 90%;
+}
+
+.pFlex {
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem;
+  line-height: 90%;
+}
+
+.pFlex {
+  box-sizing: content-box;
+}
+
+main {
+  padding: 1rem 3rem;
+}
+
+.images {
+  padding: 0 5vw 0 5vw;
+  position: relative;
+  right: 1vw;
+}
+
+.imageWrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 10rem 0 20rem;
+}
+
+.imgWrapperOne img,
+.imgWrapperTwo img {
+  width: 650px;
+  border: solid black 3px;
+}
+
+.captionWrapperOne,
+.captionWrapperTwo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.captionWrapperOne small,
+.captionWrapperTwo small {
+  width: 50%;
+}
+
+.explore {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  right: -6vw;
+}
+
+.explore span {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.explore span::after {
+  content: " ";
+  position: absolute; /*macht es relative zu dem span el, das wir auf relative gesetzt haben*/
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: black;
+  transition: width 0.2s;
+}
+
+.explore span:hover::after {
+  width: 100%;
+}
+
+.circle-and-arrow-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.circle {
+  width: 128px;
+  height: 128px;
+  position: relative;
+  z-index: 0;
+}
+
+.arrow {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  bottom: 1.2vw;
+  right: 4vw;
+  z-index: 1;
+}
+
+.arrow:hover {
+}
