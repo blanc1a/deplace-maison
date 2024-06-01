@@ -14,7 +14,7 @@
 
 html {
   height: 1080px;
-  background-color: aqua;
+  background-color: white;
 }
 body {
   background-color: #fcf9ee;
@@ -110,7 +110,6 @@ header {
 
 .bigTitle {
   font-size: 15rem;
-
   font-weight: 520;
   text-transform: uppercase;
   display: flex;
@@ -428,10 +427,8 @@ header {
 }
 
 .aboutDeplaceMaison {
-  padding: 4rem 8rem 5rem 20rem;
+  padding: 4rem 8rem 20rem 20rem;
 }
-
-/*FIXENNNNNN!!!!!*/
 
 .aboutWrapper {
   display: flex;
@@ -502,7 +499,141 @@ header {
   transform: translateY(-100%);
 }
 
-.PLACEHOLDER {
-  height: 600px;
-  background-color: aquamarine;
+footer {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 0.5fr;
+  font-family: Favorit, sans-serif;
+}
+
+footer div {
+  padding: 0 4rem 0 4rem;
+}
+
+.newsletterSection {
+  font-size: 1.2rem;
+}
+
+.newsletterSection img {
+  width: 102px;
+  height: 66px;
+}
+
+.infoSection p:first-child {
+  font-size: 1.2rem;
+}
+
+.infoSection p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.formMiniContainer {
+  border-bottom: solid black 1px;
+  display: flex;
+  padding: 1rem 0 1rem 0;
+}
+
+.formMiniContainer input {
+  all: unset;
+  color: gray;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+.formMiniContainer button {
+  all: unset;
+  margin-left: auto;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.credits,
+.creditsToo {
+  padding-top: 2rem;
+  align-self: end;
+  font-size: 1.1rem;
+}
+
+.socialMedia {
+  display: flex;
+  padding: 0;
+}
+
+.socialMedia img {
+  margin-top: 2rem;
+  width: 43px;
+  height: 43px;
+}
+
+.arrowWrap {
+  padding: 0;
+}
+
+.circleWrapperFooter {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.circleFooter {
+  width: 128px;
+  height: 128px;
+  position: relative;
+  left: 0;
+  z-index: 0;
+}
+
+.arrowFooter {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  bottom: 30px;
+  left: -95px;
+  z-index: 1;
+  transform: rotate(270deg);
+  transition: transform 0.3s linear;
+}
+
+.arrowFooter:hover {
+  transform: rotate(0);
+}
+.arrowFooter:hover::after {
+  transform: rotate(270deg);
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 1920px) {
+  .images {
+    padding-top: 4rem;
+    padding-right: 0;
+  }
+  .imageWrapper {
+    padding: 0 0 5rem 24rem;
+  }
+
+  .explore {
+    margin-right: 3rem;
+  }
+
+  .arrow {
+    bottom: 1.5vw;
+    right: 5.3vw;
+  }
+
+  .shop-all {
+    margin-top: 10rem;
+  }
+
+  .aboutDeplaceMaison {
+    margin-left: 7rem;
+  }
 }
